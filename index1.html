@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Based Route Manager</title>
+    <link rel="stylesheet" href="./Css/styles1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>StudentBzaar</h1>
+        <nav>
+            <ul>
+                <li><a href="#route-input">Delivery Details</a></li>
+                <li><a href="#book-search">Search Books</a></li>
+                <li><a href="#route-output">Optimal Route</a></li>
+                <li><a href="#total-payment">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="route-input" class="card">
+            <h2>Enter Delivery Details</h2>
+            <form id="delivery-form">
+                <label for="seller-location">Seller Location:</label>
+                <input type="text" id="seller-location" required>
+                
+                <label for="buyer-location">Buyer Location:</label>
+                <input type="text" id="buyer-location" required>
+                
+                <button type="submit">Calculate Route</button>
+            </form>
+        </section>
+        <section id="book-search" class="card">
+            <h2>Search for Books</h2>
+            <input type="text" id="search-input" placeholder="Enter book title or author">
+            <button id="search-button">Search</button>
+        </section>
+        <section id="search-results" class="card">
+            <h2>Search Results</h2>
+            <div id="results-list"></div>
+        </section>
+        <section id="route-output" class="card">
+            <h2>Optimal Route</h2>
+            <div id="route-result"></div>
+        </section>
+        <section id="total-payment" class="card">
+            <h2>Total Payment</h2>
+            <p>Total from Cart: ₹<span id="cart-total">0</span></p>
+            <p>Additional Charges: ₹<span id="additional-charges">0</span></p>
+            <p><strong>Total Payment: ₹<span id="total-payment-amount">0</span></strong></p>
+            <button id="pay-button" class="btn-pay">Pay</button>
+        </section>
+        <div id="qr-code" style="display:none;">
+            <h2>QR Code for Payment</h2>
+            <div id="qrcode"></div>
+            <button id="close-qr" class="btn-close">Close</button>
+        </div>
+        <div id="blur-background" style="display:none;"></div>
+    </main>
+    <footer>
+        <p>&copy;AI-Based Route Manager. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
